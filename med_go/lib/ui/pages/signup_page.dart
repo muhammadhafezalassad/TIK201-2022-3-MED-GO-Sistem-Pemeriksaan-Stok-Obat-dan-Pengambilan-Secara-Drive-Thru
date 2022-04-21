@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:med_go/shared/theme.dart';
 import 'package:med_go/ui/widgets/custome_button.dart';
+import 'beranda.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -80,6 +81,27 @@ class SignUpPage extends StatelessWidget {
 
             TextFormField(
               decoration: InputDecoration(
+                hintText: 'Alamat',
+                hintStyle: greenStyle.copyWith(
+                  fontSize: 14,
+                ),
+                labelText: 'Masukkan Alamat',
+                labelStyle: greenStyle.copyWith(
+                  fontSize: 14,
+                ),
+                border: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: kPrimeColor,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            TextFormField(
+              decoration: InputDecoration(
                 hintText: 'Email',
                 hintStyle: greenStyle.copyWith(
                   fontSize: 14,
@@ -99,7 +121,6 @@ class SignUpPage extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Kata Sandi',
@@ -126,7 +147,11 @@ class SignUpPage extends StatelessWidget {
               textcolor: kWhiteColor,
               title: 'Daftar',
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+               Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new Beranda()),
+                        );
               },
             ),
             const SizedBox(

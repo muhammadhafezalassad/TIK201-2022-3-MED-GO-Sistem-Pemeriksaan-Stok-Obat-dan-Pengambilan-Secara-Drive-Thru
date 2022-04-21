@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:med_go/shared/theme.dart';
 
-class InfoPage extends StatelessWidget {
-  const InfoPage({Key? key}) : super(key: key);
+class NotifPage extends StatelessWidget {
+  const NotifPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimeColor,
-      appBar: AppBar(
-        title: Text("Contact Us"),
-        backgroundColor: kPrimeColor,
-      ),
+      backgroundColor: kWhiteColor,
       body: SafeArea(
         child: Column(
           children: [
@@ -37,35 +33,7 @@ class InfoPage extends StatelessWidget {
             ),
             Container(child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, children: [SizedBox(height: 40,),
-            Text(
-              'Email          : medgo@gmail.com',
-              style: whiteStyle.copyWith(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
-              SizedBox(height: 20,),
-            Text(
-              'Phone         : 0812 3456 7890',
-              style: whiteStyle.copyWith(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
-              SizedBox(height: 20,),
-
-            Text(
-              'Instagram  : medgo.id',
-              style: whiteStyle.copyWith(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
-              SizedBox(height: 20,),
-
-            Text(
-              'Facebook   : MED-GO Indonesia',
-              style: whiteStyle.copyWith(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
+            Text('s'),
 
             ],),),            
             const SizedBox(

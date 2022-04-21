@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:med_go/shared/theme.dart';
-import 'package:flutter/material.dart';
 import 'package:med_go/ui/pages/info_page.dart';
+import 'package:med_go/ui/pages/tips_page.dart';
+import 'order_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -69,7 +70,11 @@ class _HomePageState extends State<HomePage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
                 color: kPrimeColor,
-                onPressed: () async {
+                onPressed: () {Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => new OrderPage()),
+                          );
                   },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -103,7 +108,11 @@ class _HomePageState extends State<HomePage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)),
                 color: kPrimeColor,
-                 onPressed: () {
+                 onPressed: () {Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => new TipsPage ()),
+                          );
                         },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

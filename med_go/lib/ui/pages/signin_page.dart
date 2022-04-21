@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:med_go/shared/theme.dart';
 import 'package:med_go/ui/widgets/custome_button.dart';
+import 'beranda.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -90,7 +91,11 @@ class SignInPage extends StatelessWidget {
               textcolor: kWhiteColor,
               title: 'Masuk',
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+                Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) => new Beranda()),
+                        );
               },
             ),
             const SizedBox(
